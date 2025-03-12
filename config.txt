@@ -20,9 +20,9 @@ disable_splash=1
 gpu_mem=192
 
 # Enable I2C, SPI, and audio
-dtparam=i2c_arm=on
-dtparam=spi=on
-dtparam=audio=on
+#dtparam=i2c_arm=on
+#dtparam=spi=on
+#dtparam=audio=on
 
 # Automatically load overlays for detected cameras
 camera_auto_detect=1
@@ -32,8 +32,8 @@ camera_auto_detect=1
 # This makes it possible to run Scenic out of the box with the popular
 # Raspberry Pi 7" Touchscreen. It appears to be harmless for non-touchscreen
 # users, but if not, let us know!
-dtoverlay=rpi-ft5406
-dtoverlay=rpi-backlight
+#dtoverlay=rpi-ft5406
+#dtoverlay=rpi-backlight
 
 # Comment this in or modify to enable OneWire
 # NOTE: check that the overlay that you specify is in the boot partition or

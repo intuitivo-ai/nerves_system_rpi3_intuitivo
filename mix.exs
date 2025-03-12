@@ -1,8 +1,8 @@
 defmodule NervesSystemRpi3.MixProject do
   use Mix.Project
 
-  @github_organization "nerves-project"
-  @app :nerves_system_rpi3
+  @github_organization "nintuitivo-ai"
+  @app :nerves_system_rpi3_intuitivo
   @source_url "https://github.com/#{@github_organization}/#{@app}"
   @version Path.join(__DIR__, "VERSION")
            |> File.read!()
@@ -13,7 +13,7 @@ defmodule NervesSystemRpi3.MixProject do
       app: @app,
       version: @version,
       # Because we're using OTP 27, we need to enforce Elixir 1.17 or later.
-      elixir: "~> 1.17",
+      elixir: "~> 1.6",
       compilers: Mix.compilers() ++ [:nerves_package],
       nerves_package: nerves_package(),
       description: description(),
@@ -67,9 +67,9 @@ defmodule NervesSystemRpi3.MixProject do
 
   defp deps do
     [
-      {:nerves, "~> 1.11", runtime: false},
-      {:nerves_system_br, "1.29.3", runtime: false},
-      {:nerves_toolchain_armv7_nerves_linux_gnueabihf, "~> 13.2.0", runtime: false},
+      {:nerves, "~> 1.5.4 or ~> 1.6.0 or ~> 1.7.15 or ~> 1.8", runtime: false},
+      {:nerves_system_br, "1.27.1", runtime: false},
+      {:nerves_toolchain_aarch64_nerves_linux_gnu, "~> 13.2.0", runtime: false},
       {:nerves_system_linter, "~> 0.4", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.22", only: :docs, runtime: false}
     ]
@@ -77,7 +77,7 @@ defmodule NervesSystemRpi3.MixProject do
 
   defp description do
     """
-    Nerves System - Raspberry Pi 3B, 3B+, Zero 2W
+    Nerves System - Raspberry Pi 3B, 3B+, Zero 2W Intuitivo
     """
   end
 
